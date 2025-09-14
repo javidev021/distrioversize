@@ -1,9 +1,9 @@
 /* Características básicas de la fuente */
 @font-face {
-    font-family: 'IcoMoon-Free';
-    src: url('iconos.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "RobotoCustom";
+  src: url("../FONTS/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Estructura de la clase para llamar la fuente (icono) */

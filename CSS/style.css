@@ -1,94 +1,217 @@
-/* Colores principales */
+/* Importamos la fuente personalizada */
+@import url("fonts.css");
+
+/* Variables de colores */
 :root {
-  --negro: #0a0a0a;
+  --negro: #000000;
   --dorado: #d4af37;
   --blanco: #ffffff;
+  --gris: #f4f4f4;
 }
 
-/* Estilos generales */
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: var(--blanco);
+  color: var(--negro);
+  line-height: 1.6;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
   background-color: var(--negro);
   color: var(--blanco);
+  padding: 1rem 0;
 }
 
-/* Navbar */
-.navbar {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--negro);
-  border-bottom: 2px solid var(--dorado);
+  width: 90%;
+  margin: auto;
 }
 
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.navbar h1 {
-  color: var(--dorado);
+nav .logo {
   font-size: 1.5rem;
-  letter-spacing: 2px;
+  font-weight: bold;
+  color: var(--dorado);
 }
 
-.navbar ul {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
-.navbar a {
-  text-decoration: none;
+nav ul li a {
   color: var(--blanco);
-  font-weight: 500;
+  text-decoration: none;
   transition: color 0.3s;
 }
 
-.navbar a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--dorado);
 }
 
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 5rem 2rem;
-  background: linear-gradient(180deg, var(--negro), #1a1a1a);
+/* ---------------- MAIN ---------------- */
+main {
+  width: 90%;
+  margin: 2rem auto;
 }
 
-.hero h2 {
-  color: var(--dorado);
-  font-size: 2.5rem;
-}
-
-.hero p {
-  margin: 1rem 0;
-  font-size: 1.2rem;
-}
-
-.hero button {
-  background-color: var(--dorado);
+h1, h2 {
   color: var(--negro);
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: transform 0.2s, background-color 0.3s;
+  margin-bottom: 1rem;
 }
 
-.hero button:hover {
-  transform: scale(1.05);
-  background-color: #b7952b;
+p {
+  margin-bottom: 1rem;
 }
 
-/* Footer */
-footer {
-  text-align: center;
+/* ---------------- PRODUCTOS ---------------- */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.producto {
+  background: var(--gris);
   padding: 1rem;
-  border-top: 2px solid var(--dorado);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.producto h2 {
+  color: var(--dorado);
+  margin-bottom: 0.5rem;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ---------------- NOSOTROS ---------------- */
+main section {
+  margin-bottom: 2rem;
+}
+
+main section p {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/* ---------------- CONTACTO ---------------- */
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--gris);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.form-contacto label {
+  font-weight: bold;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-contacto textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-contacto button {
+  background: var(--dorado);
+  color: var(--negro);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-contacto button:hover {
+  background: #b8962c;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: var(--negro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem 0;
   margin-top: 3rem;
+}
+
+.productos {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.productos h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #d4af37; /* Dorado */
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.producto {
+  background: #111;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.producto h3 {
+  margin: 15px 0 10px;
+  color: #fff;
+}
+
+.producto p {
+  font-size: 0.9rem;
+  color: #ccc;
 }
