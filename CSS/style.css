@@ -1,178 +1,96 @@
-/* Importamos la fuente personalizada */
-@import url("fonts.css");
-
-/* Variables de colores */
-:root {
-  --negro: #000000;
-  --dorado: #d4af37;
-  --blanco: #ffffff;
-  --gris: #f4f4f4;
-}
-
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General */
 body {
-  font-family: "Roboto", Arial, sans-serif;
-  background-color: var(--blanco);
-  color: var(--negro);
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
 }
 
-/* ---------------- HEADER ---------------- */
-header {
-  background-color: var(--negro);
-  color: var(--blanco);
-  padding: 1rem 0;
-}
-
-nav {
+/* Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin: auto;
+  padding: 20px;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-nav .logo {
+.logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--dorado);
+  color: #d4af37; /* Dorado */
 }
 
-nav ul {
+.logo span {
+  color: #fff;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
-nav ul li a {
-  color: var(--blanco);
+.nav-links a {
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  color: var(--dorado);
+.nav-links a:hover,
+.nav-links a.active {
+  color: #d4af37;
 }
 
-/* ---------------- MAIN ---------------- */
-main {
-  width: 90%;
-  margin: 2rem auto;
-}
-
-h1, h2 {
-  color: var(--negro);
-  margin-bottom: 1rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* ---------------- PRODUCTOS ---------------- */
-.productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.producto {
-  background: var(--gris);
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.producto img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.producto h2 {
-  color: var(--dorado);
-  margin-bottom: 0.5rem;
-}
-
-.producto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* ---------------- NOSOTROS ---------------- */
-main section {
-  margin-bottom: 2rem;
-}
-
-main section p {
-  font-size: 1.1rem;
-  text-align: justify;
-}
-
-/* ---------------- CONTACTO ---------------- */
-.form-contacto {
+/* Hero */
+.hero {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background: var(--gris);
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-.form-contacto label {
-  font-weight: bold;
-}
-
-.form-contacto input,
-.form-contacto textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.form-contacto textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-contacto button {
-  background: var(--dorado);
-  color: var(--negro);
-  border: none;
-  padding: 0.8rem;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.form-contacto button:hover {
-  background: #b8962c;
-}
-
-/* ---------------- FOOTER ---------------- */
-footer {
-  background: var(--negro);
-  color: var(--blanco);
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background: url("assets/img/hero-bg.jpg") center/cover no-repeat;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 3rem;
 }
 
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+.highlight {
+  color: #d4af37;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #d4af37;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #b9972a;
+}
+
+/* Misión */
+.mision {
+  padding: 60px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.mision h2 {
+  color: #d4af37;
+}
+
+/* Productos */
 .productos {
   padding: 80px 20px;
   text-align: center;
@@ -181,7 +99,7 @@ footer {
 .productos h1 {
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #d4af37; /* Dorado */
+  color: #d4af37;
 }
 
 .grid-productos {
@@ -214,4 +132,13 @@ footer {
 .producto p {
   font-size: 0.9rem;
   color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  font-size: 0.9rem;
+  color: #aaa;
 }
