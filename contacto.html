@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DistriOversize - Contacto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="inicio.html" class="logo">Distri<span>Oversize</span></a>
+      <nav>
+        <button class="mobile-menu-btn">☰</button>
+        <ul class="nav-list">
+          <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li>
+            <button class="cart-btn" id="cartButton">
+              🛒 <span class="cart-count">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Estamos aquí para ti</h3>
+          <p>¿Tienes preguntas sobre nuestros productos o necesitas asesoramiento personalizado? No dudes en
+            contactarnos.</p>
+          <div class="contact-details">
+            <p><strong>Ubicación:</strong> Itagüí, Antioquia</p>
+            <p><strong>Email:</strong> info@distrioversize.com</p>
+            <p><strong>Redes Sociales:</strong> @distrioversize</p>
+            <!-- <p>Habla con un asesor <a href="https://wa.me/3016034502" target="_blank">WhatsApp</a></p> -->
+            <a href="https://wa.me/3016034502" title="Contact us on WhatsApp"><img src="https://static.vecteezy.com/system/resources/previews/018/930/564/non_2x/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png.png" width="50px" alt="WhatsApp Logo"></a>
+
+          
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" class="form-input" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 DistriOversize. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

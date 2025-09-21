@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DistriOversize - Productos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="inicio.html" class="logo">Distri<span>Oversize</span></a>
+      <nav>
+        <button class="mobile-menu-btn">☰</button>
+        <ul class="nav-list">
+          <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li>
+            <button class="cart-btn" id="cartButton">
+              🛒 <span class="cart-count">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tu Carrito de Compras</h2>
+      <div id="cartItems" class="cart-items">
+        <p class="empty-cart-msg">Tu carrito está vacío</p>
+      </div>
+      <div class="cart-total">
+        <p>Total: <span id="cartTotal">$0</span> COP</p>
+      </div>
+      <button id="checkoutBtn" class="btn checkout-btn">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <section id="productos" class="products">
+    <div class="container">
+      <h2 class="section-title">Nuestros Productos</h2>
+      <div class="products-grid">
+        <div class="producto" onclick="abrirOpciones('Camisa Oversize Negra', 50000)">
+          <img src="camisa.jpg" alt="Camisa Oversize Negra">
+          <h3>Camisa Oversize Negra</h3>
+          <p>$55.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Opciones -->
+  <div id="optionsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarOpciones()">&times;</span>
+      <h2 id="productoSeleccionado">Elige tus opciones</h2>
+      <div id="optionsContent">
+        <div class="form-group">
+          <label for="sizeSelect">Talla:</label>
+          <select id="sizeSelect" class="form-input">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="colorSelect">Color:</label>
+          <select id="colorSelect" class="form-input">
+            <option value="Negro">Negro</option>
+            <option value="Blanco">Blanco</option>
+            <option value="Gris">dorado</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quantityInput">Cantidad:</label>
+          <input type="number" id="quantityInput" class="form-input" value="1" min="1">
+        </div>
+        <button id="addToCartWithOptions" class="btn">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 DistriOversize. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

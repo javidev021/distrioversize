@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DistriOversize - Minimalismo urbano, calidad premium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="inicio.html" class="logo">Distri<span>Oversize</span></a>
+      <nav>
+        <button class="mobile-menu-btn">☰</button>
+        <ul class="nav-list">
+          <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li>
+            <button class="cart-btn" id="cartButton">
+              🛒 <span class="cart-count">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tu Carrito de Compras</h2>
+      <div id="cartItems" class="cart-items">
+        <p class="empty-cart-msg">Tu carrito está vacío</p>
+      </div>
+      <div class="cart-total">
+        <p>Total: <span id="cartTotal">$0</span> COP</p>
+      </div>
+      <button id="checkoutBtn" class="btn checkout-btn">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="container hero-content">
+      <h1 class="hero-title">Minimalismo urbano, calidad premium</h1>
+      <p class="hero-subtitle">Descubre nuestra colección de camisetas oversize con diseños únicos y materiales de alta
+        calidad para el público joven moderno.</p>
+      <a href="productos.html" class="btn">Ver Colección</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 DistriOversize. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
